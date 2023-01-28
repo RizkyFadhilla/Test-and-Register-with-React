@@ -74,10 +74,25 @@ function RegisterForm() {
       let validate = {
         ...validation,
       };
-      validate = {
-        ...validation,
-        password: "Looks good! Don't worry, we won't tell anyone.",
-      };
+      if (newObj["password"].length > 0) {
+        validate = {
+          ...validation,
+          password: "Looks good! Don't worry, we won't tell anyone.",
+        };
+        if (newObj["password"] !== newObj["confirmPassword"]) {
+          validate = {
+            ...validation,
+            password: "Looks good! Don't worry, we won't tell anyone.",
+            confirmPassword: "Password doesnt match",
+          };
+        } else {
+          validate = {
+            ...validation,
+            password: "Looks good! Don't worry, we won't tell anyone.",
+            confirmPassword: "Looks good!",
+          };
+        }
+      }
       setValidation(validate);
     }
     if (name === "confirmPassword") {
