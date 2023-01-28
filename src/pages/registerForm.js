@@ -256,7 +256,7 @@ function RegisterForm() {
               </select>
             </div>
             <br />
-            {validation.companyToApply}
+            <p style={{ color: "green" }}>{validation.companyToApply}</p>
             <br />
             <label htmlFor="floatingInput">Position To Apply</label>
             <br />
@@ -320,29 +320,26 @@ function RegisterForm() {
               />
             </div>
             <br />
-            {validation.fullName}
+            <p style={{ color: "red" }}>{validation.fullName}</p>
             <br />
             <div>
-              <label htmlFor="floatingInput">Phone Number</label>
-              <br />
+              <label>Phone Number</label>
               <input
                 type="text"
-                id="floatingInput"
                 name="phoneNumber"
                 placeholder="phoneNumber"
                 value={input.phoneNumber}
                 onChange={phoneHandler}
               />
               <br />
-              {validation.phoneNumber}
+              <p style={{ color: "red" }}>{validation.phoneNumber} </p>
+              <br />
             </div>
-            <br />
             <div>
-              <label htmlFor="floatingPassword">Password</label>
+              <label>Password</label>
               <br />
               <input
                 type="password"
-                id="floatingPassword"
                 name="password"
                 placeholder="Password"
                 value={input.password}
@@ -358,11 +355,10 @@ function RegisterForm() {
             {validation.password}
             <br />
             <div>
-              <label htmlFor="floatingPassword">Confirm Password</label>
+              <label>Confirm Password</label>
               <br />
               <input
                 type="password"
-                id="floatingPassword"
                 name="confirmPassword"
                 placeholder="confirmPassword"
                 value={input.confirmPassword}
@@ -378,7 +374,7 @@ function RegisterForm() {
             {validation.confirmPassword}
             <br />
             <div>
-              <button type="submit">Sign up</button>
+              <input type="submit" value={"Register"} />
             </div>
           </form>
         </main>
