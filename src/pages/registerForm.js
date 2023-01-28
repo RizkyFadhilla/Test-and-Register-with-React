@@ -367,7 +367,7 @@ function RegisterForm() {
             />
             Show Password
             <br />
-            {validation.password}
+            <p style={{ color: "green" }}>{validation.password}</p>
             <br />
             <div>
               <label>Confirm Password</label>
@@ -386,7 +386,7 @@ function RegisterForm() {
             />
             Show Password
             <br />
-            {validation.confirmPassword}
+            <p>{validation.confirmPassword}</p>
             <br />
             <div>
               <input type="submit" value={"Register"} />
